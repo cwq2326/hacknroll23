@@ -8,7 +8,7 @@ const client = new Client({
 });
 
 client.connect().then(() => {
-  client.query('SELECT NOW()', (err, res) => {
+  client.query('SELECT * FROM mrt_stops', (err, res) => {
     console.log(res.rows)
     client.end()
   });
