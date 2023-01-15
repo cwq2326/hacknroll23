@@ -1,9 +1,11 @@
 const { Client } = require("pg");
 const express = require("express");
+const cors = require('cors')
 require("dotenv").config();
 
 const app = express();
 app.use(express.json());
+app.use(cors())
 
 const text = `select name from hdb_blocks 
                 join mrt_stations on hdb_blocks.subzone = mrt_stations.subzone
@@ -37,7 +39,7 @@ app.get("/:postal_code", async (req, res) => {
       });
     res.status(404).json({
       status: "failure",
-      message: "Invalid postal code",
+      message: "No data found",
     });
   } catch (err) {
     res.status(400).json({
