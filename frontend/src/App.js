@@ -9,9 +9,6 @@ const App = () => {
   return (
     <div>
       <Inputs/>
-
-      <Output/>
-
     </div>
   )
 }

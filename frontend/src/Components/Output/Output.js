@@ -2,7 +2,7 @@ import "./Output.css"
 import React from "react"
 import Card from "../../UI/Card"
 
-const Output = (props) => {
+const Output = ({station}) => {
     return (
         <div>
             <Card className = "output">
@@ -10,7 +10,7 @@ const Output = (props) => {
                     Nearest MRT station is:
                 </label>
                 <label>
-                    "Answer"
+                    {station}
                 </label>
 
             </Card>

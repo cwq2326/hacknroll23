@@ -19,5 +19,12 @@
   border-radius: 6px;
   border: 1px solid #ccc;
   width: 20rem;
-  max-width: 100%;
+  max-width: 80%;
+}
+.button {
+  border: 1px solid #fff;
+  display: inline-block;
+  margin-left: 1rem;
+  text-align: center;
+  width: 15%;
 }
